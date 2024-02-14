@@ -1,8 +1,7 @@
 package org.example.employee;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
+
 
 public class Employee {
 
@@ -12,16 +11,19 @@ public class Employee {
     LocalDate dateOfBirth;
     String position;
 
+    double salary;
 
 
-
-    public Employee(int id, String name, String lastName, LocalDate dateOfBirth, String position) {
+    public Employee(int id, String name, String lastName, LocalDate dateOfBirth, String position, double salary) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
         this.position = position;
+        this.salary = salary;
     }
+
+
 
     public int getId() {
         return id;
@@ -41,6 +43,10 @@ public class Employee {
 
     public String getPosition() {
         return position;
+    }
+
+    public double getSalary() {
+        return salary;
     }
 
     @Override
